@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserFormEditComponent } from './user-form-edit/user-form-edit.component';
+import { HomeComponent } from './home/home.component';
+import { UserFormCreateComponent } from './user-form-create/user-form-create.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { UserFormEditComponent } from './user-form-edit/user-form-edit.component
     HeaderComponent,
     FooterComponent,
     UserListComponent,
-    UserFormEditComponent
+    UserFormEditComponent,
+    HomeComponent,
+    UserFormCreateComponent
   ],
   imports: [
     BrowserModule,
