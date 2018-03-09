@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'practice-user-list',
@@ -8,38 +9,12 @@ import { User } from '../model/user';
 })
 export class UserListComponent implements OnInit {
 
-  userlist : User []= [];
+  userlist: User[] = [];
 
-  constructor() { 
-
-  this.userlist.push ({
-    name: 'gabriel 0',
-    lastname: 'meneses',
-    username:'gabriel123',
-    email:'gabriel@correo.com',
-  });
-  this.userlist.push ({
-    name: 'gabriel 1',
-    lastname: 'meneses',
-    username:'gabriel123',
-    email:'gabriel@correo.com',
-  });
-  this.userlist.push ({
-    name: 'gabriel 2',
-    lastname: 'meneses',
-    username:'gabriel123',
-    email:'gabriel@correo.com',
-  });
-  this.userlist.push ({
-    name: 'gabriel 3',
-    lastname: 'meneses',
-    username:'gabriel123',
-    email:'gabriel@correo.com',
-  });
-
-}
+  constructor(private userservice: UserService) { }
 
   ngOnInit() {
+    this.userlist = this.userservice.getUserList();
   }
 
 }

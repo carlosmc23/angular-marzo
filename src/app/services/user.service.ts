@@ -7,11 +7,39 @@ import { User } from "../model/user";
 @Injectable()
 export class UserService {
 
-myhttpClient: HttpClient;
+  myhttpClient: HttpClient;
 
-  constructor(inserthttpclient:HttpClient) { 
-    this.myhttpClient= inserthttpclient;
+  constructor(inserthttpclient: HttpClient) {
+    this.myhttpClient = inserthttpclient;
   }
 
+  getUserList(): User[] {
+    let userlist :User[] = [];
+    userlist.push({
+      name: 'gabriel 0',
+      lastname: 'meneses',
+      username: 'gabriel123',
+      email: 'gabriel@correo.com',
+    });
+    userlist.push({
+      name: 'gabriel 1',
+      lastname: 'meneses',
+      username: 'gabriel123',
+      email: 'gabriel@correo.com',
+    });
+    userlist.push({
+      name: 'gabriel 2',
+      lastname: 'meneses',
+      username: 'gabriel123',
+      email: 'gabriel@correo.com',
+    });
+    userlist.push({
+      name: 'gabriel 3',
+      lastname: 'meneses',
+      username: 'gabriel123',
+      email: 'gabriel@correo.com',
+    });
+    return userlist;
 
+  }
 }
