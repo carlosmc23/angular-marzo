@@ -8,14 +8,36 @@ import { User } from '../model/user';
 })
 export class UserListComponent implements OnInit {
 
-  test : User ={
-    name: 'gabriel',
+  userlist : User []= [];
+
+  constructor() { 
+
+  this.userlist.push ({
+    name: 'gabriel 0',
     lastname: 'meneses',
     username:'gabriel123',
     email:'gabriel@correo.com',
-  }
+  });
+  this.userlist.push ({
+    name: 'gabriel 1',
+    lastname: 'meneses',
+    username:'gabriel123',
+    email:'gabriel@correo.com',
+  });
+  this.userlist.push ({
+    name: 'gabriel 2',
+    lastname: 'meneses',
+    username:'gabriel123',
+    email:'gabriel@correo.com',
+  });
+  this.userlist.push ({
+    name: 'gabriel 3',
+    lastname: 'meneses',
+    username:'gabriel123',
+    email:'gabriel@correo.com',
+  });
 
-  constructor() { }
+}
 
   ngOnInit() {
   }
