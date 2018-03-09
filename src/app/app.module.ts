@@ -10,6 +10,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserFormEditComponent } from './user-form-edit/user-form-edit.component';
 import { HomeComponent } from './home/home.component';
 import { UserFormCreateComponent } from './user-form-create/user-form-create.component';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -20,13 +22,16 @@ import { UserFormCreateComponent } from './user-form-create/user-form-create.com
     UserListComponent,
     UserFormEditComponent,
     HomeComponent,
-    UserFormCreateComponent
+    UserFormCreateComponent,
+  
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
