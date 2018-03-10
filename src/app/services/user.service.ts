@@ -3,43 +3,19 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import { User } from "../model/user";
 
+const userApiUrl= 'http://localhost:3000/users';
 
 @Injectable()
 export class UserService {
 
-  myhttpClient: HttpClient;
+  
 
-  constructor(inserthttpclient: HttpClient) {
-    this.myhttpClient = inserthttpclient;
+  constructor(private httpclient: HttpClient) { //estamos inyectando HttpClient
+    
   }
 
-  getUserList(): User[] {
-    let userlist :User[] = [];
-    userlist.push({
-      name: 'gabriel 0',
-      lastname: 'meneses',
-      username: 'gabriel123',
-      email: 'gabriel@correo.com',
-    });
-    userlist.push({
-      name: 'gabriel 1',
-      lastname: 'meneses',
-      username: 'gabriel123',
-      email: 'gabriel@correo.com',
-    });
-    userlist.push({
-      name: 'gabriel 2',
-      lastname: 'meneses',
-      username: 'gabriel123',
-      email: 'gabriel@correo.com',
-    });
-    userlist.push({
-      name: 'gabriel 3',
-      lastname: 'meneses',
-      username: 'gabriel123',
-      email: 'gabriel@correo.com',
-    });
-    return userlist;
+  getUserList(): Observable<any>{
+    return this.httpclient.get(userApiUrl);
 
   }
 }
