@@ -13,6 +13,7 @@ import { UserFormCreateComponent } from './user-form-create/user-form-create.com
 import { UserService } from './services/user.service';
 import { HttpClientModule } from "@angular/common/http";
 import { UserViewComponent } from './user-view/user-view.component';
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -25,13 +26,14 @@ import { UserViewComponent } from './user-view/user-view.component';
     HomeComponent,
     UserFormCreateComponent,
     UserViewComponent,
-  
-   
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

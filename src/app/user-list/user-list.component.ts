@@ -28,8 +28,8 @@ export class UserListComponent implements OnInit {
         }
       )
   }
-  viewUser(userId: string):void{
 
+  viewUser(userId: string):void{
     this.router.navigate(['user',userId,'view']);
   }
 
