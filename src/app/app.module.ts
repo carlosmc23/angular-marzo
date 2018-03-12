@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { UserFormCreateComponent } from './user-form-create/user-form-create.component';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from "@angular/common/http";
+import { UserViewComponent } from './user-view/user-view.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HttpClientModule } from "@angular/common/http";
     UserFormEditComponent,
     HomeComponent,
     UserFormCreateComponent,
+    UserViewComponent,
   
    
   ],
