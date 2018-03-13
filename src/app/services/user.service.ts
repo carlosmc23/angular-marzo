@@ -25,4 +25,8 @@ export class UserService {
   createUser(newUser: User): Observable<any> {
     return this.httpclient.post(userApiUrl, newUser);
   }
+
+  updateUser(editUser: User, userId:string): Observable<any>{
+    return this.httpclient.put(`${userApiUrl}/${userId}`,editUser);
+  }
 }

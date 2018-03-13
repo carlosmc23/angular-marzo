@@ -33,4 +33,8 @@ export class UserListComponent implements OnInit {
     this.router.navigate(['user',userId,'view']);
   }
 
+  editUser(userEditId: string):void{
+    this.router.navigate(['user', userEditId, 'edit']);
+  }
+
 }

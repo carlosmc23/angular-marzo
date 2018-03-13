@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { UserService } from '../services/user.service';
 import { Subscriber } from 'rxjs/Subscriber';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'practice-user-form-create',
@@ -23,7 +23,7 @@ export class UserFormCreateComponent implements OnInit {
 
   constructor(
     private userservice: UserService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {

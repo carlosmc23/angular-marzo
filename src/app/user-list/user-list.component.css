@@ -3,6 +3,11 @@
     width: 15%;
     outline: black solid thin;
     }
+.detail-options{
+    float: left;
+    width: 25%;
+    outline: black solid thin;
+    }
 .clean{
     clear: both;
-} 
+}

@@ -22,11 +22,11 @@ export class UserViewComponent implements OnInit {
 
   constructor(
      private userservice: UserService,           //inyectamos el userservice
-     private route: ActivatedRoute      //inyectamos el activateRoute
+     private activatedroute: ActivatedRoute      //inyectamos el activateRoute
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe(
+    this.activatedroute.params.subscribe(
       (paramss)=>{
         this.userId=paramss.id;
         this.userservice.getUserById(this.userId).subscribe(

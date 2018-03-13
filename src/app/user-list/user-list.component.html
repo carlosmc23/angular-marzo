@@ -10,8 +10,8 @@
     <B>User name</B>
   </div>
 
-  <div class="detail-user">
-    <B>Options</B>
+  <div class="detail-options">
+    <B>Options by User</B>
   </div>
   <div class="clean"></div>
 </div>
@@ -20,9 +20,11 @@
   <div class="detail-user">{{ user.lastname }}</div>
   <div class="detail-user">{{ user.username }}</div>
 
-  <div class="detail-user">
-    <button>Edit</button>
+  <div class="detail-options">
+
     <button (click)= "viewUser(user._id)">View</button>
+    <button (click)= "editUser(user._id)">Edit</button>
+    <button >Delete</button>
   </div>
   <div class="clean"></div>
 </div>
