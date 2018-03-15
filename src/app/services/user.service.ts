@@ -29,4 +29,7 @@ export class UserService {
   updateUser(editUser: User, userId:string): Observable<any>{
     return this.httpclient.put(`${userApiUrl}/${userId}`,editUser);
   }
+  deleteUser(deletingUserId:string):Observable<any>{
+    return this.httpclient.delete(`${userApiUrl}/${deletingUserId}`);
+  }
 }

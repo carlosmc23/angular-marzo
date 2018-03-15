@@ -1,0 +1,13 @@
+<h1>Login</h1>
+<div>
+  <label>User Name</label>
+  <input type="text" [(ngModel)]= 'credentials.username'><br><br>
+</div>
+<div>
+  <label>Password</label>
+  <input type="password" [(ngModel)]= 'credentials.password'><br><br>
+</div>
+<div>
+  <button href [routerLink]= "'/home'">Cancel</button>
+  <button (click)= "login()">Login User</button>
+</div>

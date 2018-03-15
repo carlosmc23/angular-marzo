@@ -11,9 +11,12 @@ import { UserFormEditComponent } from './user-form-edit/user-form-edit.component
 import { HomeComponent } from './home/home.component';
 import { UserFormCreateComponent } from './user-form-create/user-form-create.component';
 import { UserService } from './services/user.service';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { UserViewComponent } from './user-view/user-view.component';
 import { FormsModule } from "@angular/forms";
+import { TokenInyectorService } from './services/token-inyector.service';
+import { UserFormLoginComponent } from './user-form-login/user-form-login.component';
+
 
 
 @NgModule({
@@ -26,7 +29,7 @@ import { FormsModule } from "@angular/forms";
     HomeComponent,
     UserFormCreateComponent,
     UserViewComponent,
-
+    UserFormLoginComponent
 
   ],
   imports: [
@@ -35,7 +38,11 @@ import { FormsModule } from "@angular/forms";
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInyectorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

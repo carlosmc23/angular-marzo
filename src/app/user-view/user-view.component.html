@@ -1,6 +1,9 @@
+<h1>User Data</h1>
+
 <p><b>Name: </b>{{userViewed.name}}</p>
 <p><b> Last Name: </b>{{userViewed.lastname}}</p>
 <p><b>User Name: </b>{{userViewed.username}}</p>
 <p><b>E-mail: </b>{{userViewed.email}}</p>
 <p><b>Avatar: </b></p>
-<img [src]="userViewed.avatar">
+<img [src]="userViewed.avatar"><br>
+<button href [routerLink]= "'/user/list'">Back</button>
