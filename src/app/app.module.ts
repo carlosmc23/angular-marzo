@@ -16,6 +16,8 @@ import { UserViewComponent } from './user-view/user-view.component';
 import { FormsModule } from "@angular/forms";
 import { TokenInyectorService } from './services/token-inyector.service';
 import { UserFormLoginComponent } from './user-form-login/user-form-login.component';
+import { AuthService } from './services/auth.service';
+
 
 
 
@@ -42,7 +44,7 @@ import { UserFormLoginComponent } from './user-form-login/user-form-login.compon
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInyectorService,
     multi: true
-  }],
+  }, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

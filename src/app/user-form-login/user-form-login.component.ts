@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'practice-user-form-login',
@@ -8,19 +9,28 @@ import { Component, OnInit } from '@angular/core';
 export class UserFormLoginComponent implements OnInit {
 
 
-  
-  constructor() { }
 
-  credentials={
-    username:'',
-    password:''
+  constructor(private authservice: AuthService ) { }
+
+  credentials = {
+    username: '',
+    password: ''
   }
 
   ngOnInit() {
   }
-login():void{
-  console.log('credenciales',this.credentials);
+  login(): void {
+    this.authservice.login(this.credentials)
+      .subscribe(
+        (response) => {
+          console.log('respuestaa: ', response);
+          sessionStorage.removeItem('token');
+          sessionStorage.setItem('token', response.token);
+        }, (error) => {
+          console.log('error: ', error);
+        }
+      );
 
-}
+  }
 
 }
