@@ -1,0 +1,16 @@
+<h1>My Personal Information</h1>
+<p>
+   <b>Name: </b>{{ myUser.name}}</p>
+ 
+ <p>
+   <b>Last Name: </b>{{ myUser.lastname}}</p>
+ 
+ <p>
+   <b>User Name: </b>{{ myUser.username}}</p>
+ 
+ <p>
+   <b>Email: </b>{{ myUser.email}}</p>
+ 
+ <img [src]="myUser.avatar" *ngIf="myUser.avatar != null"><br><br>
+ 
+<button (click)='logout()'> Log Out</button>

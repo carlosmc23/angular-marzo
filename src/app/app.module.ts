@@ -17,6 +17,7 @@ import { FormsModule } from "@angular/forms";
 import { TokenInyectorService } from './services/token-inyector.service';
 import { UserFormLoginComponent } from './user-form-login/user-form-login.component';
 import { AuthService } from './services/auth.service';
+import { UserInformationComponent } from './user-information/user-information.component';
 
 
 
@@ -31,7 +32,8 @@ import { AuthService } from './services/auth.service';
     HomeComponent,
     UserFormCreateComponent,
     UserViewComponent,
-    UserFormLoginComponent
+    UserFormLoginComponent,
+    UserInformationComponent
 
   ],
   imports: [
